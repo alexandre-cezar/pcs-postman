@@ -1,7 +1,7 @@
-# Instructions on how to setup the Postman Collections and Environments relating to Prisma Cloud (including Compute Console) API requests
+# Instructions on how to setup the Postman Collections and Environments relating to Prisma Cloud (including Compute Console and Microsegmentation) API requests
 
-To use these Collections and Environment, there are a few setup pieces after importing the 3 files into Postman:
-1. [Import the 3 files](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) in root of this repo (2 Collections and 1 Environment) into Postman.
+To use these Collections and Environment, there are a few setup pieces after importing the 5 files into Postman:
+1. [Import the 5 files](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) in root of this repo (3 Collections and 2 Environments) into Postman.
 
 ![1](./Images/Import1.png)
 
@@ -24,6 +24,10 @@ To use these Collections and Environment, there are a few setup pieces after imp
 1. To get the address/URL for your Console, go to *Compute > Manage > System > Downloads*, and copy the string under **Path to Console**
 **The URL should look something like this:** https://us-east1.cloud.twistlock.com/us-1-123456789
    1. You will be replacing the **compute-api-endpoint** variable
+   
+1. To get the address/URL for your Microsegmentation Console and click on the key icon at the bottom of your page
+**The URL should look something like this:** https://api.east-01.network.prismacloud.io
+   1. You will be replacing the **aporeto-api-endpoint** variable
 
 1. Depending on what Admin console you see when you log in will determine which API Endpoint you will use. 
    1. The corresponding value below will replace the **api-endpoint** variable.
@@ -54,7 +58,9 @@ compute-api-endpoint	| API endpoint for all things within the Compute tab | http
 compute-token	| JWT token auto-generated after the Compute /authenticate request | 
 api-version | Used only for the Compute collection for future API versions | v1
 console-port | Used only for self-hosted versions of the Compute Console | 
-
+aporeto-api-endpoint | API endpoint for all things within the Microsegmentation tab
+namespace | The namespace on the microsegmentation module where you want to run your actions
+aporeto-token | JWT token auto-generated after the Microsegmentation /issue request
 
 ## Advanced Postman scenarios using Collection Runner
 
